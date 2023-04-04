@@ -1,0 +1,19 @@
+<br>
+<div class="pageAddEdit">
+    <br>
+    <h1 class="center">Editar tarefa</h1>
+<br>
+    <form class="addEditTask" action="/tasks/edit" method="POST">
+    <input type="hidden" name="id" value="{{task.id}}">
+    <label for="title">TÍTULO</label>
+    <input type="text" name="title" placeholder="O que você vai fazer?" value="{{task.title}}">
+<br>
+    <label for="description">DESCRIÇÃO</label>
+    <textarea name="description" placeholder="Descreva a tarefa">{{task.description}}</textarea>
+    <br>
+    <button class="save">SALVAR EDIÇÕES</button>
+
+</form>
+       <br>
+</div>
+

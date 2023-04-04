@@ -1,0 +1,68 @@
+<br>
+<div class="pageTasks">
+    <br>
+    <h1 class="center">Tarefas</h1>
+    <br>
+
+    {{#each tasks}}
+
+    <div class="tasks flex">
+
+        <div class="actions">
+            {{#if this.done}}
+            <form action="/tasks/updatestatus" method="POST">
+                <input type="hidden" name="id" value="{{this.id}}">
+                <input type="hidden" name="done" value="{{this.done}}">
+                <button class="checked check" type="submit"></button>
+            </form>
+
+            {{!-- TÍTULO DA TAREFA --}}
+            <input type="hidden" value="{{this.id}}">
+            <a href="tasks/task/{{this.id}}" class="item-tasks"
+                style="text-decoration: line-through;">{{this.title}}</a>
+
+            {{else}}
+            <form action="/tasks/updatestatus" method="POST">
+                <input type="hidden" name="id" value="{{this.id}}">
+                <input type="hidden" name="done" value="{{this.done}}">
+                <button class="unchecked check" type="submit"></button>
+            </form>
+
+            {{!-- TÍTULO DA TAREFA --}}
+            <input type="hidden" value="{{this.id}}">
+            <a class="teste" href="tasks/task/{{this.id}}" class="item-tasks">{{this.title}}</a>
+            {{/if}}
+
+        </div>
+
+        {{!-- BOTÕES --}}
+        <div class="action-buttons">
+
+            <form action="tasks/edit/{{this.id}}">
+                <input type="hidden" name="id" value="{{this.id}}">
+                <button type="submit">
+                    <img src="/images/edit.png" alt="" height="20">
+                </button>
+            </form>
+
+            <form action="/tasks/remove" method="POST">
+                <input type="hidden" name="id" value="{{this.id}}">
+                <button type="submit">
+                    <img src="/images/delete.png" alt="" height="20">
+                </button>
+            </form>
+
+        </div>
+
+
+
+    </div>
+    <hr>
+
+
+
+
+
+    {{/each}}
+    <br><br>
+</div>

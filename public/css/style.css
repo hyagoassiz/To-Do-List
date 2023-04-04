@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Edu NSW ACT Foundation','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #887254;
+}
+
+button {
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover{
+    opacity: 70%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.center {
+    text-align: center;
+    align-items: center;
+}
+
