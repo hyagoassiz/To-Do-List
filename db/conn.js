@@ -21,5 +21,4 @@ try {
 }
 
 
-
 module.exports = sequelize
